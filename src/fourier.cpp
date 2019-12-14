@@ -7,6 +7,10 @@
 
 #include "fourier.h"
 
+/*
+ * this function generates a fourier transform of a signal using
+ * the definition of the transform
+ */
 vector<complex<double>> fourier(vector<double> signal, int N){
 	vector<complex<double>> spectrum;
 //	int count = 0;
@@ -29,6 +33,9 @@ vector<complex<double>> fourier(vector<double> signal, int N){
 	return spectrum;
 }
 
+/*
+ * this function computes the magnitude of the above fourier transform
+ */
 vector<double> magnitude(vector<complex<double>> spectrum){
 	vector<double> magnitude;
 
