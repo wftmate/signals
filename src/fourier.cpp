@@ -26,7 +26,7 @@ vector<complex<double>> fourier(vector<double> signal, int N){
 		}
 //		tmp(real() // access real component
 //		tmp.real() // access real component
-		tmp = tmp/(double)N;
+		tmp = tmp*2/(double)N;  // normalize transform (btwn 0 & 1)
 		spectrum.push_back(tmp);
 	}
 //	cout << count << endl;
