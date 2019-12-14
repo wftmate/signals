@@ -26,8 +26,6 @@ int main(){
 	sine = gen_sine(N, length);
 	//plot(sine);
 
-	// change
-
 //	// plot the cosine function
 //	vector<double> cosine;
 //	cosine = gen_cos(N, length);
