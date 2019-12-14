@@ -1,15 +1,16 @@
 #include <iostream>
 //#include <fstream>
 //#include <cstring>
-//#include <fftw.h>
 #include <fftw3.h> // sudo apt isntall fftw3-dev
-#include <rfftw.h>
 
 #include "generation.h"
 #include "fourier.h"
 #include "display.h"
 
 using namespace std;
+
+#define REAL 0
+#define IMAG 1
 
 const string n ="\n";
 
@@ -22,9 +23,11 @@ std::vector<double>::iterator it; // still not sure how this shit works...
 std::vector<int> list = {1, 2, 3, 4};
 
 int main(){
-	// plot the sine function only
+	// generate sine & cosine functions
 	vector<double> sine;
 	sine = gen_sine(N, length);
+	vector<double> cosine;
+	cosine = gen_cos(N, length);
 	//plot(sine);
 
 //	// plot the cosine function
@@ -46,10 +49,23 @@ int main(){
 	plot(mag);
 
 //	// -- FFTW3 of real signal (version 3.3.8) ---
-	fftw_complex *in, *out;
+	// allocate memory for real input signal
+	double* in;
+	in = (double*)fftw_malloc(sizeof(double) * N);
 
+	// allocate memory for complex output signal
+	fftw_complex* out;
+	out = (fftw_complex*)fftw_malloc(sizeof(fftw_complex) * (N/2)+1);
 
+	// create fft plan
+	fftw_plan plan;
+	plan = fftw_plan_dft_r2c_1d(N, in, out, FFTW_ESTIMATE);
 
+	// execute fft
+	fftw_execute(plan);
+	// find magnitude of complex-valued fft
+
+	// plot magnitude
 
 	return 0;
 }
