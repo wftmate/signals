@@ -14,6 +14,7 @@
 // they will be copied to all files which include this file
 #include <vector>
 #include <cmath>
+#include <fftw3.h>
 
 using namespace std;
 
@@ -26,6 +27,6 @@ std::vector<double> gen_sine(int sample_rate, int length);
 // prefix "std::___"
 vector<double> gen_cos(int sample_rate, int length);
 
-
+fftw_complex * gen_complex_sin(int N, int length);
 
 #endif /* GENERATION_H_ */

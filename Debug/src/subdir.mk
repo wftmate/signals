@@ -5,21 +5,21 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 CPP_SRCS += \
 ../src/display.cpp \
-../src/fourier.cpp \
 ../src/generation.cpp \
-../src/main.cpp 
+../src/main.cpp \
+../src/my_fourier.cpp 
 
 OBJS += \
 ./src/display.o \
-./src/fourier.o \
 ./src/generation.o \
-./src/main.o 
+./src/main.o \
+./src/my_fourier.o 
 
 CPP_DEPS += \
 ./src/display.d \
-./src/fourier.d \
 ./src/generation.d \
-./src/main.d 
+./src/main.d \
+./src/my_fourier.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -5,8 +5,8 @@
  *      Author: will
  */
 
-#ifndef FOURIER_H_
-#define FOURIER_H_
+#ifndef MY_FOURIER_H_
+#define MY_FOURIER_H_
 
 #include <cmath>
 #include <vector>
@@ -21,4 +21,4 @@ vector<complex<double>> fourier(vector<double> signal, int N);
 vector<double> magnitude(vector<complex<double>> spectrum);
 
 
-#endif /* FOURIER_H_ */
+#endif /* MY_FOURIER_H_ */

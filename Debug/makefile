@@ -44,7 +44,7 @@ all: signals
 signals: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++ -L/usr/include/boost -L/usr/lib/x86_64-linux-gnu -o "signals" $(OBJS) $(USER_OBJS) $(LIBS)
+	g++ -L/usr/include/boost -L/usr/lib/x86_64-linux-gnu -L/usr/lib -o "signals" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 

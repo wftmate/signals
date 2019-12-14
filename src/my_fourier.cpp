@@ -5,7 +5,7 @@
  *      Author: will
  */
 
-#include "fourier.h"
+#include "my_fourier.h"
 
 /*
  * this function generates a fourier transform of a signal using

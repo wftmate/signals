@@ -4,7 +4,7 @@
  *  Created on: Dec 12, 2019
  *      Author: will
  */
-
+#include <fftw3.h>
 #include "generation.h"
 
 std::vector<double> gen_sine(int sample_rate, int length){
@@ -41,4 +41,12 @@ vector<double> gen_cos(int sample_rate, int length){
 	}
 //	cout << signal.size() << endl;
 	return signal;
+}
+
+fftw_complex * gen_complex_sin(int sample_rate, int length){
+	fftw_complex sine;
+	for(int i = 0; i < length; i++)
+		sine[i][0] = (sin((2*M_PI/sample_rate)*i));
+
+	return sine;
 }

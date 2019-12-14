@@ -4,5 +4,5 @@
 
 USER_OBJS :=
 
-LIBS := -lboost_system -lboost_iostreams
+LIBS := -lboost_system -lboost_iostreams -lfftw3
 
